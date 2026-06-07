@@ -4,6 +4,8 @@
 This project is a data pipeline built in Databricks that figures out which NFL teams had the hardest schedules over the 2023, 2024, and 2025 seasons. Instead of just looking at one year, it combines all three seasons into a single leaderboard. It pulls messy, nested JSON game files from cloud storage and cleans them up to calculate a combined Strength of Schedule score for all 32 teams. 
 I built this to get hands-on experience with big data architecture and cloud databases. The main goal was to figure out how to parse massive, deeply nested JSON files without using slow Python loops that drag down performance. It forced me to learn how to use distributed computing to flatten arrays and run complex database joins efficiently.
 
+[Software Demo Video](http://youtube.link.goes.here)
+
 # Cloud Database
 
 For this project, I used a modern Lakehouse architecture built inside Databricks. Instead of a traditional standalone database engine, the data is managed using a local Catalog schema (workspace.nfl) where individual datasets are stored as Delta tables. The underlying storage uses cloud-managed Volumes, which lets the pipeline interact with raw file streams and structured tables inside the same environment.
